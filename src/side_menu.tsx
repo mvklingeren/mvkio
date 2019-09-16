@@ -3,18 +3,23 @@ import React from "react";
 import { jsx, css } from "@emotion/core";
 
 const base = css`
-  display: flex;
   list-style: none;
-  flex-direction: column;
-  margin: 0;
-  padding: 0;
+  flex: 0 0 20%;
 `;
 
 const SideMenu: React.FC = ({ children }) => {
   if (!children) return <></>;
 
   const childLinks = React.Children.map(children, child => {
-    return <li>{child}</li>;
+    return (
+      <li
+        css={css`
+          padding: 5px 10px;
+        `}
+      >
+        {child}
+      </li>
+    );
   });
 
   return (
