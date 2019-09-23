@@ -4,7 +4,6 @@ import { jsx, css } from "@emotion/core";
 
 const base = css`
   list-style: none;
-  flex: 0 0 20%;
 `;
 
 const SideMenu: React.FC = ({ children }) => {
@@ -26,7 +25,7 @@ const SideMenu: React.FC = ({ children }) => {
     <ul
       css={css`
         ${base};
-        background-color: #eee;
+        background-color: inherit;
       `}
     >
       {childLinks}
