@@ -1,6 +1,5 @@
-import React from "react";
-
 /** @jsx jsx */ import { jsx, css } from "@emotion/core";
+import React from "react";
 
 type ProjectProps = {
   name: string;

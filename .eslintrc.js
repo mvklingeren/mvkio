@@ -23,15 +23,7 @@ module.exports = {
   plugins: ["react", "@typescript-eslint"],
   rules: {
     "react/jsx-uses-react": "error",
-    "react/jsx-uses-vars": "error",
-    "no-unused-vars": "off",
-    "@typescript-eslint/no-unused-vars": [
-      "warn",
-      {
-        args: "none",
-        ignoreRestSiblings: true
-      }
-    ]
+    "react/jsx-uses-vars": "error"
   },
   settings: {
     react: {
