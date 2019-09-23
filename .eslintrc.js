@@ -21,10 +21,7 @@ module.exports = {
     sourceType: "module"
   },
   plugins: ["react", "@typescript-eslint"],
-  rules: {
-    "react/jsx-uses-react": "error",
-    "react/jsx-uses-vars": "error"
-  },
+  rules: {},
   settings: {
     react: {
       version: "detect"
