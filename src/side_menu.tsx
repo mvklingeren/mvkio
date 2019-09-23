@@ -1,12 +1,13 @@
-import React from "react";
+import React, { ReactChildren, ReactNode } from "react";
 /** @jsx jsx */
 import { jsx, css } from "@emotion/core";
+import PropTypes from "prop-types";
 
 const base = css`
   list-style: none;
 `;
 
-const SideMenu: React.FC = ({ children }) => {
+const SideMenu: React.FC = ({ children }: { children?: ReactNode }) => {
   if (!children) return <></>;
 
   const childLinks = React.Children.map(children, child => {

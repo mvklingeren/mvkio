@@ -1,13 +1,14 @@
 import React from "react";
+import PropTypes, { string } from "prop-types";
 
 /** @jsx jsx */ import { jsx, css } from "@emotion/core";
 
 type ProjectProps = {
   name: string;
-  url?: string;
+  url: string;
 };
 
-const Project: React.FC<ProjectProps> = ({ name, url }) => {
+const Project: React.FC<ProjectProps> = ({ name, url }: ProjectProps) => {
   return (
     <div
       css={css`

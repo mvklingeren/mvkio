@@ -5,8 +5,8 @@ module.exports = {
   },
   extends: [
     "plugin:@typescript-eslint/eslint-recommended",
-    "prettier/@typescript-eslint"
-    // "plugin:react/recommended"
+    "prettier/@typescript-eslint",
+    "plugin:react/recommended"
   ],
   globals: {
     Atomics: "readonly",
@@ -24,5 +24,10 @@ module.exports = {
   rules: {
     "react/jsx-uses-react": "error",
     "react/jsx-uses-vars": "error"
+  },
+  settings: {
+    react: {
+      version: "detect"
+    }
   }
 };

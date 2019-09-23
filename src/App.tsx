@@ -97,7 +97,11 @@ const App: React.FC = () => {
                 />
 
                 <Route
-                  component={() => <p>I can't find what you're looking for.</p>}
+                  component={() => {
+                    return (
+                      <p>I can`&apos;`t find what you`&apos;`re looking for.</p>
+                    );
+                  }}
                 />
               </Switch>
             </main>
@@ -109,8 +113,8 @@ const App: React.FC = () => {
             `}
           >
             <p>
-              No copyright; do whatever you'd like with the content of this
-              site.
+              No copyright; do whatever you`&apos;`d like with the content of
+              this site.
             </p>
           </footer>
         </div>
