@@ -1,7 +1,6 @@
-import React, { ReactChildren, ReactNode } from "react";
+import React, { ReactNode } from "react";
 /** @jsx jsx */
 import { jsx, css } from "@emotion/core";
-import PropTypes from "prop-types";
 
 const base = css`
   list-style: none;

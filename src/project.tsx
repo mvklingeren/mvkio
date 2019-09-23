@@ -1,5 +1,4 @@
 import React from "react";
-import PropTypes, { string } from "prop-types";
 
 /** @jsx jsx */ import { jsx, css } from "@emotion/core";
 
