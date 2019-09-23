@@ -1,4 +1,4 @@
-// eslint-disable-line
+// eslint-disable-line no-unused-vars
 import React from "react";
 import { useRef, useState } from "react";
 import Project from "./project";
