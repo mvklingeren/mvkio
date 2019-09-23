@@ -1,4 +1,5 @@
-import React, { useRef, useState } from "react";
+import React from "react";
+import { useRef, useState } from "react";
 import Project from "./project";
 /** @jsx jsx */ import { jsx, css } from "@emotion/core";
 
@@ -10,9 +11,9 @@ import TransitionGroup from "react-transition-group/TransitionGroup";
 // to let the transitiongroup know that it can be removed from the DOM
 // this is the only way to let react-transition-group delegate timing
 // to the JavaScript animation
-const ANIMATION_DONE_EVENT = "animation::done";
-const triggerAnimationDoneEvent = (node: any) =>
-  node.dispatchEvent(new Event(ANIMATION_DONE_EVENT));
+//const ANIMATION_DONE_EVENT = "animation::done";
+// const triggerAnimationDoneEvent = (node: any) =>
+//   node.dispatchEvent(new Event(ANIMATION_DONE_EVENT));
 
 const createOpacityAnimationConfig = (animatingIn: any) => ({
   value: animatingIn ? [0, 1] : 0,
@@ -20,7 +21,7 @@ const createOpacityAnimationConfig = (animatingIn: any) => ({
   duration: 2500
 });
 
-const easing = "spring(1, 130, 10)";
+// const easing = "spring(1, 130, 10)";
 
 const animateGridIn = (gridContainer: HTMLElement) =>
   anime.timeline().add({

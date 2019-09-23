@@ -5,7 +5,7 @@ import { Link, BrowserRouter } from "react-router-dom";
 import Logo from "./logo";
 import SideMenu from "./side_menu";
 /** @jsx jsx */
-import { jsx, css, keyframes } from "@emotion/core";
+import { jsx, css } from "@emotion/core";
 import ProjectsGrid from "./projects";
 
 // const bounce = keyframes`
