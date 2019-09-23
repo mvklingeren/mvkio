@@ -1,18 +1,19 @@
 module.exports = {
+  parser: "@typescript-eslint/parser",
   env: {
     browser: true,
     es6: true
   },
   extends: [
-    "plugin:@typescript-eslint/eslint-recommended",
-    "prettier/@typescript-eslint",
-    "plugin:react/recommended"
+    "react-app",
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "prettier/@typescript-eslint"
   ],
   globals: {
     Atomics: "readonly",
     SharedArrayBuffer: "readonly"
   },
-  parser: "@typescript-eslint/parser",
   parserOptions: {
     ecmaFeatures: {
       jsx: true
@@ -20,14 +21,16 @@ module.exports = {
     ecmaVersion: 2018,
     sourceType: "module"
   },
-  plugins: ["react", "@typescript-eslint"],
-  rules: {
-    "react/jsx-uses-react": "error",
-    "react/jsx-uses-vars": "error"
-  },
+  plugins: ["react"],
   settings: {
     react: {
       version: "detect"
     }
+  },
+  rules: {
+    "@typescript-eslint/prefer-interface": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/explicit-function-return-type": "error",
+    "@typescript-eslint/no-use-before-define": ["error", { functions: false }]
   }
 };
