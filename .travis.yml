@@ -9,6 +9,7 @@ script:
 deploy:
   provider: pages
   repo: mvklingeren/mvklingeren.github.io
+  target_branch: master
   skip_cleanup: true
   github_token: $github_token
   local_dir: build
