@@ -1,22 +1,21 @@
-// eslint-disable-next-line no-unused-vars
 import { useRef, useState } from "react";
 import Project from "./project";
-import { css } from "@emotion/core";
 
+/** @jsx jsx */
+import { jsx, css } from "@emotion/core";
+// eslint-disable-next-line
+import React, { ReactElement } from "react";
 import anime from "animejs";
 import Transition from "react-transition-group/Transition";
 import TransitionGroup from "react-transition-group/TransitionGroup";
-import React, { ReactElement } from "react";
 
-
-const createOpacityAnimationConfig = (animatingIn: any) :any => ({
+const createOpacityAnimationConfig = (animatingIn: any): any => ({
   value: animatingIn ? [0, 1] : 0,
   easing: "linear",
   duration: 2500
 });
 
-
-const animateGridIn = (gridContainer: HTMLElement) :any =>
+const animateGridIn = (gridContainer: HTMLElement): any =>
   anime.timeline().add({
     targets: gridContainer.querySelectorAll(".card"),
     translateY: [1000, 0],
@@ -24,8 +23,13 @@ const animateGridIn = (gridContainer: HTMLElement) :any =>
     opacity: createOpacityAnimationConfig(true)
   });
 
-
-const ProjectsGrid = ({ items, visible }: {items:any, visible:boolean}) : ReactElement => {
+const ProjectsGrid = ({
+  items,
+  visible
+}: {
+  items: any;
+  visible: boolean;
+}): ReactElement => {
   const transitionKey = useRef(1);
   const [prevVisible, setPrevVisible] = useState(visible);
   if (visible !== prevVisible) setPrevVisible(visible);

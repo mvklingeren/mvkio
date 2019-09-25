@@ -20,7 +20,8 @@ module.exports = {
       jsx: true
     },
     ecmaVersion: 2018,
-    sourceType: "module"
+    sourceType: "module",
+    warnOnUnsupportedTypeScriptVersion: false
   },
   plugins: ["react"],
   settings: {
@@ -30,6 +31,7 @@ module.exports = {
   },
   rules: {
     "@typescript-eslint/prefer-interface": "off",
+    "@typescript-eslint/no-unused-vars": "off",
     "@typescript-eslint/no-explicit-any": "off",
     "@typescript-eslint/explicit-function-return-type": "error",
     "@typescript-eslint/no-use-before-define": ["error", { functions: false }]

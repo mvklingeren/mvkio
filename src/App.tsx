@@ -8,35 +8,6 @@ import SideMenu from "./side_menu";
 import { jsx, css } from "@emotion/core";
 import ProjectsGrid from "./projects";
 
-// const bounce = keyframes`
-//   from, 20%, 53%, 80%, to {
-//     transform: translate3d(0,0,0);
-//   }
-
-//   40%, 43% {
-//     transform: translate3d(0, -30px, 0);
-//   }
-
-//   70% {
-//     transform: translate3d(0, -15px, 0);
-//   }
-
-//   90% {
-//     transform: translate3d(0,-4px,0);
-//   }
-// `;
-
-// const spinaround = keyframes`
-//   from {
-//       -webkit-transform: rotateY(0deg);
-//       opacity:0;
-//   }
-//   to {
-//       -webkit-transform: rotateY(359deg);
-//       opacity:1;
-//   }
-// `;
-
 const App: React.FC = () => {
   return (
     <div css={css``}>
